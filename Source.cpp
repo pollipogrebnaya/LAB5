@@ -4,7 +4,6 @@
 #include "header.h"
 using namespace std;
 
-
 int main() {
     Planet planet1("Mercury", 233049.65, 10892.6, 647.4, 23.6, 69820000.765, TERRESTRIAL);
     Planet planet2("Venera", 27405.87, 44536.9, 364.7, 23.9, 56546473.978, TERRESTRIAL);
@@ -25,8 +24,8 @@ int main() {
     planets.addPlanet(planet7);
     planets.addPlanet(planet8);
 
-    planets.SortByLenghtOfDay();
-    planets.PrintPlanetsLengthOfDay();
+    planets.sortByLenghtOfDay();
+    planets.printPlanetsLengthOfDay();
 
     double distanceBetweenMarsAndNeptun = Planetary::findDistanceBetween(&planet4, &planet8);
     cout << "Distance between Mars and Neptun: " << distanceBetweenMarsAndNeptun << endl;

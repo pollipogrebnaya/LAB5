@@ -12,7 +12,7 @@ enum type {
 class Planet {
 
 public:
-    string name;
+    string name_of_planet;
     float mass_in_kg;
     float orbital_of_velocity;
     float mean_of_temperature;
@@ -21,9 +21,9 @@ public:
     float distance_from_sun;
 
 
-    Planet(string name, float mass_in_kg, float orbital_of_velocity, float mean_of_temperature, float lenght_of_day, float distance_from_sun, type planetType)
+    Planet(string name_of_planet, float mass_in_kg, float orbital_of_velocity, float mean_of_temperature, float lenght_of_day, float distance_from_sun, type planetType)
     {
-        this->name = name;
+        this->name_of_planet = name_of_planet;
         this->mass_in_kg = mass_in_kg;
         this->orbital_of_velocity = orbital_of_velocity;
         this->mean_of_temperature = mean_of_temperature;
@@ -61,7 +61,7 @@ public:
     }
 
 
-    void SortByLenghtOfDay()
+    void sortByLenghtOfDay()
     {
         for (int i = 0; i < planets.size(); i++) {
             for (int j = i + 1; j < planets.size(); j++) {
@@ -72,10 +72,10 @@ public:
         }
     }
 
-    void PrintPlanetsLengthOfDay()
+    void printPlanetsLengthOfDay()
     {
         for (int k = 0; k < planets.size(); k++) {
-            cout << planets[k].name << " = " << planets[k].lenght_of_day << endl;
+            cout << planets[k].name_of_planet << " = " << planets[k].lenght_of_day << endl;
         }
     }
 };
